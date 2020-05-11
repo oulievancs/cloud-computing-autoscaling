@@ -1,0 +1,13 @@
+{
+	"name": "test1",
+	"version": "1.0.1",
+	"description": "Node.js Overload on Docker",
+	"author": "Oulis Evangelos <cs151051@uniwa.gr",
+	"main": "server.js",
+	"script": {
+		"start": "node server.js"
+	},
+	"dependencies": {
+		"express": "^4.16.1"
+	}
+}

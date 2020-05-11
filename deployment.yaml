@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: goodbye-web
+  name: goodbye-web
+  namespace: goodbye-cpu
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: goodbye-web
+  template:
+    metadata:
+      labels:
+        app: goodbye-web
+    spec:
+      containers:
+      - name: goodbye-app
+        image: gcr.io/bustling-opus-262223/goodbye-app:v2
+        resources:
+          requests:
+            cpu: 100m
+          limits:
+            cpu: 500m
